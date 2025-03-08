@@ -1,0 +1,106 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url(book.jpg);background-size:1360px 830px;
+    margin: 0;
+    padding: 0;
+}
+ul {
+    list-style-type: none;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    margin:0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #111;
+    z-index: 1;
+  }
+  li {float: left;}
+  li a {
+    display: block;
+    color: #FFFFFF;
+    text-align: center;
+    font-family: inherit;
+    padding: 5px 50px;
+    text-decoration: none;
+  }
+  li a:hover {background-color:#696969;}
+.container {
+    max-width: 400px;
+    margin: 15px ;
+    background-color:peachpuff;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;     
+}
+h1 {
+    text-align: center;
+    color:black;
+}
+form {text-align: left;}
+label {
+    display:block;
+    margin-bottom: 5px;
+    color:#333;
+}
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="number"],
+select,
+textarea {
+    width: 97%;
+    padding: 7px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+button {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+}
+button:hover {background-color: #0056b3;}
+
+@media (max-width: 767px) {
+ul {
+    position: static; 
+    }
+    li {
+    float: none; 
+    display: block; 
+    }
+    li a {
+    padding: 10px;
+    text-align: center;
+    font-family: inherit;
+    }
+.container {
+    max-width: 100%; 
+    margin: 10px 20px; 
+    padding: 30px; 
+    overflow: hidden;
+}
+form {text-align: center;}
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="number"],
+select,
+textarea {
+    width: 100%; 
+    margin-bottom: 10px; 
+}
+h1 {font-size: 24px;}
+button {
+    padding: 10px 15px;
+    font-size: 16px; 
+}
+}
+

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="book.css">
+    <script src="main.js" defer></script>
+    <title>Hotel Booking</title>
+</head>
+<body>
+    <ul>
+        <li><a href="home.html"><h4>HOME</h4></a></li>
+        <li><a href="branch.html"><h4>BRANCHES</h4></a></li>
+        <li><a href="restaurant.html"><h4>RESTAURANTS</h4></a></li>
+        <li><a href="adven.html"><h4>ADVENTURES</h4></a></li>
+        <li><a href="book.html"><h4>BOOKING</h4></a></li>
+        <li><a href="contact.html"><h4>CONTACT US</h4></a></li>
+        <li><a href="sign.html"><h4>👤 SIGN IN</h4></a></li>
+    </ul><br>
+    <div class="container">
+        <h1>Hotel Booking</h1>
+        <form id="booking-form">
+            <label for="room-type">Room Type:</label>
+           
+            <label for="rooms">Single:</label>
+            <input type="number" id="single-rooms" name="rooms" min="0" placeholder="Enter Number of Rooms" required>
+
+            <label for="rooms">Double:</label>
+            <input type="number" id="double-rooms" name="rooms" min="0" placeholder="Enter Number of Rooms" required>
+
+            <label for="rooms">Triple:</label>
+            <input type="number" id="triple-rooms" name="rooms" min="0" placeholder="Enter Number of Rooms" required>
+
+            <label for="extra-bed">Extra Bed:</label>
+            <input type="checkbox" id="extra-bed" name="extra-bed" onchange="updateRoomCostDisplay()">
+
+            <label for="adults">Number of Adults:</label>
+            <input type="number" id="adults" name="adults" min="1" required>
+
+            <label for="children">Number of Children(Above 5 yrs):</label>
+            <input type="number" id="children" name="children" min="0" required>
+
+            <label for="date">Check in:</label>
+            <input type="date" id="checkin" name="checkin"  required>
+
+            <label for="date">Check out:</label>
+            <input type="date" id="checkout" name="checkout"  required>
+
+            <label for="extra-req">Extra requirements:</label>
+
+            <label for="wifi"> Wifi</label>
+            <input type="checkbox" id="wifi" name="wifi">
+
+            <label for="garden"> Garden view room</label>
+            <input type="checkbox" id="garden" name="garden">
+
+            <label for="pool">Pool view room</label>
+            <input type="checkbox" id="pool" name="pool">
+            <br>
+
+            <button type="button" id="book-now-btn" onclick="bookNow()">Book Now</button>
+        </form><br>
+        <form id="adventure-form">
+        <fieldset>
+            <legend>Adventure Booking</legend>
+        
+            <label for="adventure-type">Adventure Types:</label>
+            <label>
+                <input type="checkbox" name="adventure-type" id="local-adult"> Diving for Local Adults
+            </label><br>
+            <label>
+                <input type="checkbox" name="adventure-type" id="local-kid"> Diving for Local Kids (above 5 years)
+            </label><br>
+            <label>
+                <input type="checkbox" name="adventure-type" id="foreign-adult"> Diving for Foreign Adults
+            </label><br>
+            <label>
+                <input type="checkbox" name="adventure-type" id="foreign-kid"> Diving for Foreign Kids
+            </label>
+            <label for="guide-needed">Need a Guide:</label>
+            <input type="checkbox" id="guide-needed" name="guide-needed"><br>
+            <button type="button" id="book-adventure-btn" onclick="bookAdventure()">Book Adventure</button>
+        </fieldset>  
+        <br>
+        <div>
+            <label for="promo-code-check">Enter Promo Code:</label>
+            <input type="text" id="promo-code-check" name="promo-code-check">
+            <button type="button" id="promo-code" onclick="promo()">Enter</button>
+            <br><br>
+            <button type="button" id="check-loyalty-btn" onclick="checkLoyalty()">Check Loyalty</button>
+        </div><br>
+        <button type="button" id="add-to-favorites-btn" onclick="addToFavorites()">Add to Favorites</button>
+        <div>
+            <h2>Current Booking Cost</h2>
+            <p id="current-booking-cost">Cost: 0</p>
+        </div>
+        <div>
+            <h2>Overall Booking Cost</h2>
+            <p id="overall-booking-cost">Cost: 0</p>
+        </div>
+        </div>
+        </form>
+</body>
+</html>
